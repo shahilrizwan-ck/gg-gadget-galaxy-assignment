@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Baloo+2:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.page-wrapper {
+  background-color: rgb(244, 244, 244);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgb(5, 68, 182);
+  padding: 14px;
+
+  nav {
+    background: transparent;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      color: rgb(255, 215, 6);
+      margin-left: 10rem;
+      border: 2px solid rgb(255, 215, 6);
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .search-box {
+      display: flex;
+      margin-left: 6rem;
+      width: 27vw;
+      height: 38px;
+      background: rgb(74, 105, 196);
+      border-radius: 8px;
+      overflow: hidden;
+
+      input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        background: transparent;
+        padding: 0 15px;
+        font-size: 13.5px;
+        color: white;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      button {
+        width: 40px;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: rgb(255, 215, 6);
+        cursor: pointer;
+
+        i {
+          color: rgb(74, 105, 196);
+          font-size: 15px;
+          background: transparent;
+        }
+      }
+    }
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+      cursor: pointer;
+
+      .material-symbols-outlined {
+        margin-left: 7rem;
+        background: transparent;
+        color: white;
+      }
+      .cart-text {
+        position: relative;
+        background: transparent;
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+      }
+
+      .badge {
+        position: absolute;
+        top: -10px;
+        right: -23px;
+        width: 22px;
+        height: 22px;
+        background: rgb(209, 22, 24);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-left: 3rem;
+      gap: 6px;
+      cursor: pointer;
+      background: rgb(74, 105, 196);
+      width: 10vw;
+      height: 40px;
+      border-radius: 8px;
+
+      .fa-regular {
+        margin-left: 25px;
+        background: transparent;
+        color: white;
+      }
+      .profile-name {
+        background: transparent;
+        color: white;
+        font-weight: bold;
+        font-size: small;
+      }
+      .fa-solid {
+        margin-left: 3px;
+        color: white;
+      }
+    }
+  }
+}
+main {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5vw;
+  padding: 5vh 3vw;
+}
+.main-box {
+  position: relative;
+  background: white;
+  width: 46vw;
+  min-height: 70vh;
+  margin-left: 8rem;
+  border-radius: 8px;
+  padding: 25px;
+
+  .badge2 {
+    position: absolute;
+    top: -16px;
+    width: 30px;
+    height: 30px;
+    background: rgb(31, 165, 104);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .payment-text {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .card {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 25px;
+  }
+  hr {
+    margin-top: 12px;
+    border: none;
+    height: 1.5px;
+    background-color: rgb(233, 233, 233);
+  }
+  .Payment-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 8px;
+    background: rgb(249, 249, 249);
+    font-size: 12px;
+
+    input {
+      margin-top: 13px;
+    }
+
+    .Card-details {
+      flex: 1;
+
+      p {
+        margin: 10px 0;
+      }
+    }
+    .Card-info {
+      text-align: right;
+
+      p {
+        margin: 10px 0;
+
+        &:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            height: 18px;
+          }
+        }
+
+        &:nth-child(2) {
+          font-weight: bold;
+        }
+      }
+    }
+
+    & + .Payment-card {
+      margin-top: 10px;
+    }
+  }
+  .Payment-logo {
+    display: flex;
+    align-items: flex-start;
+
+    .apple-logo,
+    .Paypal {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .apple-logo img {
+      margin-top: 20px;
+      height: 37px;
+      width: auto;
+    }
+
+    .apple-logo span {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .Paypal img {
+      height: 70px;
+      width: auto;
+    }
+
+    .Paypal span {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      margin-left: 25px;
+      margin-top: -10px;
+    }
+  }
+  .Pay-later {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgb(255, 246, 239);
+    font-size: 13.5px;
+
+    input {
+      margin-top: 13px;
+    }
+
+    .Pay-later-details {
+      flex: 1;
+
+      p {
+        margin: 10px 0;
+
+        &:first-child {
+          color: rgb(209, 22, 24);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .payment-button {
+    display: flex;
+    justify-content: center;
+    background: rgb(5, 68, 182);
+    border-radius: 8px;
+    margin-top: 20px;
+    gap: 4px;
+    padding: 10px;
+    cursor: pointer;
+
+    .fa-euro-sign,
+    .pay {
+      flex-direction: row;
+      color: white;
+    }
+  }
+}
+.sidebox {
+  background: white;
+  width: 23vw;
+  height: 30vh;
+  border-radius: 8px;
+  padding: 25px;
+
+  .summary {
+    font-weight: bold;
+  }
+  .orderSummary {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    font-size: 15px;
+
+    hr {
+      margin-top: 12px;
+      border: none;
+      height: 1.5px;
+      background-color: rgb(233, 233, 233);
+    }
+
+    .items {
+      flex: 1;
+
+      P {
+        margin: 10px 0;
+
+        &:last-child {
+          color: rgb(5, 68, 182);
+          font-weight: bolder;
+        }
+      }
+    }
+    .pricing {
+      text-align: right;
+
+      P {
+        margin: 10px 0;
+
+        &:last-child {
+          color: rgb(5, 68, 182);
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  .payment-button {
+    display: flex;
+    justify-content: center;
+    background: rgb(5, 68, 182);
+    border-radius: 8px;
+    margin-top: 15px;
+    gap: 4px;
+    padding: 10px;
+    cursor: pointer;
+
+    .fa-euro-sign,
+    .pay {
+      flex-direction: row;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header nav h3 {
+    margin-left: 4rem;
+  }
+  header nav .search-box {
+    margin-left: 3rem;
+    width: 32vw;
+  }
+  header nav .cart .material-symbols-outlined {
+    margin-left: 3rem;
+  }
+  header nav .profile {
+    margin-left: 1.5rem;
+    width: 14vw;
+  }
+  .main-box {
+    width: 44vw;
+    margin-left: 3rem;
+  }
+  .sidebox {
+    width: 26vw;
+  }
+}
+ 
+@media (max-width: 992px) {
+  header nav {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  header nav h3 {
+    margin-left: 0;
+  }
+  header nav .search-box {
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+  }
+  header nav .cart {
+    margin-left: auto;
+  }
+  header nav .cart .material-symbols-outlined {
+    margin-left: 0;
+  }
+  header nav .profile {
+    margin-left: 1rem;
+    width: auto;
+    padding: 0 14px;
+  }
+ 
+  main {
+    flex-direction: column;
+  }
+  .main-box {
+    width: 100%;
+    margin-left: 0;
+  }
+  .sidebox {
+    width: 100%;
+    height: auto;
+  }
+}
+ 
+
+@media (max-width: 576px) {
+  header {
+    padding: 10px;
+  }
+  header nav h3 {
+    font-size: 15px;
+    padding: 6px;
+  }
+  header nav .profile .profile-name {
+    display: none;
+  }
+ 
+  main {
+    padding: 3vh 4vw;
+    gap: 16px;
+  }
+  .main-box,
+  .sidebox {
+    padding: 16px;
+  }
+ 
+  .main-box .Payment-card {
+    flex-wrap: wrap;
+  }
+  .main-box .Payment-card .Card-info {
+    text-align: left;
+  }
+  .main-box .Payment-card .Card-info p:first-child {
+    justify-content: flex-start;
+  }
+ 
+  .sidebox .orderSummary {
+    flex-wrap: wrap;
+  }
+}
+ 
